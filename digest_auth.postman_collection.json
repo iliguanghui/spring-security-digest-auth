@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "ece6066f-9668-4eaf-952c-43eed81cef35",
+		"name": "摘要认证",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5832055"
+	},
+	"item": [
+		{
+			"name": "访问根路径",
+			"protocolProfileBehavior": {
+				"followRedirects": false
+			},
+			"request": {
+				"auth": {
+					"type": "digest",
+					"digest": [
+						{
+							"key": "password",
+							"value": "adminPass",
+							"type": "string"
+						},
+						{
+							"key": "nonce",
+							"value": "MTcxMjkyOTQzMjIxNjoyZjliYWYzMDdjNDU1NTkxMDc4MjUwMDQ2NjRmMTZlYw==",
+							"type": "string"
+						},
+						{
+							"key": "clientNonce",
+							"value": "123",
+							"type": "string"
+						},
+						{
+							"key": "nonceCount",
+							"value": "1",
+							"type": "string"
+						},
+						{
+							"key": "qop",
+							"value": "auth",
+							"type": "string"
+						},
+						{
+							"key": "realm",
+							"value": "My App Realm",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "algorithm",
+							"value": "MD5",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
